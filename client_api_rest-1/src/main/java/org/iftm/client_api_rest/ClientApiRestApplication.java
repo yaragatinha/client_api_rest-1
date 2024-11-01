@@ -18,9 +18,6 @@ public class ClientApiRestApplication implements CommandLineRunner{
 		SpringApplication.run(ClientApiRestApplication.class, args);
 	}
 
-    public ClientApiRestApplication() {
-    }
-
     @Override
     public void run(String... args) throws Exception {
 

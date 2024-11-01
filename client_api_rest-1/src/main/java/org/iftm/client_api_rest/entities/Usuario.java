@@ -40,9 +40,7 @@ public class Usuario implements Serializable {
     private List<Livro> livros;
 
     // Construtores, getters e setters
-    public Usuario(long l, String string, String string2, String string3, int i) {
-    }
-
+   
     public Usuario(Long id, String cpf, String nome, String email, LocalDate dataNascimento, String telefone) {
         this.id = id;
         this.cpf = cpf;
@@ -51,6 +49,8 @@ public class Usuario implements Serializable {
         this.dataNascimento = dataNascimento;
         this.telefone = telefone;
     }
+
+    public Usuario(){}
     
     // Getters e setters para livros
     public List<Livro> getLivros() {
@@ -108,15 +108,4 @@ public class Usuario implements Serializable {
         this.telefone = telefone;
     }
 
-    public void save(Usuario usuario2) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    public Object findByid(long l) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    public Object findByid(long l) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
 }
