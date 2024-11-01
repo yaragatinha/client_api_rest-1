@@ -2,12 +2,14 @@ package org.iftm.client_api_rest.entities;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Usuario implements Serializable {
@@ -32,6 +34,9 @@ public class Usuario implements Serializable {
     @Column(nullable = false, length = 15)
     private String telefone;
 
+    @OneToMany(mappedBy = "usuario")
+    private List<Livro> livros;
+
     // Construtores, getters e setters
     public Usuario() {
     }
@@ -44,7 +49,15 @@ public class Usuario implements Serializable {
         this.dataNascimento = dataNascimento;
         this.telefone = telefone;
     }
+    
+    // Getters e setters para livros
+    public List<Livro> getLivros() {
+        return livros;
+    }
 
+    public void setLivros(List<Livro> livros) {
+        this.livros = livros;
+    }
     public Long getId() {
         return id;
     }
