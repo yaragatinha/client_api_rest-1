@@ -10,6 +10,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Transient;
 
 @Entity
 public class Usuario implements Serializable {
@@ -34,11 +35,12 @@ public class Usuario implements Serializable {
     @Column(nullable = false, length = 15)
     private String telefone;
 
-    @OneToMany(mappedBy = "usuario")
+    //@OneToMany(mappedBy = "usuario")
+    @Transient
     private List<Livro> livros;
 
     // Construtores, getters e setters
-    public Usuario() {
+    public Usuario(long l, String string, String string2, String string3, int i) {
     }
 
     public Usuario(Long id, String cpf, String nome, String email, LocalDate dataNascimento, String telefone) {
@@ -104,5 +106,17 @@ public class Usuario implements Serializable {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public void save(Usuario usuario2) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    public Object findByid(long l) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    public Object findByid(long l) {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }
