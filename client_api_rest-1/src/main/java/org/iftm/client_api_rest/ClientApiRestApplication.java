@@ -34,8 +34,8 @@ public class ClientApiRestApplication implements CommandLineRunner {
         System.out.println("\nUsuário: " + usuarioRepository.findById(1L).get().getNome());
         
         // Criando e salvando livros
-        Livro livro1 = new Livro(null, "Java para Iniciantes", "Carlos Silva", null, 2021);
-        Livro livro2 = new Livro(null, "Estrutura de Dados", "Ana Souza", null, 2019);
+        Livro livro1 = new Livro();
+        Livro livro2 = new Livro();
         livroRepository.save(livro1);
         livroRepository.save(livro2);
 
