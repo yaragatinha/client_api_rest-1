@@ -106,5 +106,5 @@ public class Usuario implements Serializable {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
-
+    
 }
