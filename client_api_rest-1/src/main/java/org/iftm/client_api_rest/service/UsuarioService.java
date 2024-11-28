@@ -35,7 +35,7 @@ public class UsuarioService {
     }
 
     private void validarUsuario(Usuario usuario) {
-        validarEmail(usuario.getEmail());
+        validarEmail(((Object) usuario).getEmail());
         validarIdade(usuario.getDataNascimento());
         validarNome(usuario.getNome());
     }
