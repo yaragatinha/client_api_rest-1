@@ -117,5 +117,4 @@ public class UsuarioService {
                 .filter(usuario -> Period.between(usuario.getDataNascimento(), LocalDate.now()).getYears() <= idadeMaxima)
                 .collect(Collectors.toList());
     }
-    
 }
